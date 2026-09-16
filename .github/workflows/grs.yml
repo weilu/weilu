@@ -20,7 +20,17 @@ jobs:
           card: stats
           options: username=weilu&theme=shadow_blue&show_icons=true
           path: profile/stats.svg
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GH_README_STATS_TOKEN }}
+
+      # github-readme-stats writes an error card (still exit 0) when auth/API fails.
+      # Fail here so a bad run never overwrites a good card with "Something went wrong!".
+      - name: Verify card is not an error
+        run: |
+          if grep -q "Something went wrong" profile/stats.svg; then
+            echo "::error::Stats card generation failed:"
+            grep -o 'data-testid="message".*' profile/stats.svg || cat profile/stats.svg
+            exit 1
+          fi
 
       - name: Commit cards
         run: |
