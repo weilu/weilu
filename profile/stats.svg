@@ -9,7 +9,7 @@
         aria-labelledby="descId"
       >
         <title id="titleId">Wei Lu's GitHub Stats, Rank: A+</title>
-        <desc id="descId">Total Stars Earned: 119, Total Commits  (last year) : 1232, Total PRs: 387, Total Issues: 270, Contributed to (last year): 54</desc>
+        <desc id="descId">Total Stars Earned: 119, Total Commits  (last year) : 1248, Total PRs: 387, Total Issues: 270, Contributed to (last year): 54</desc>
         <style>
           .header {
             font: 600 18px 'Segoe UI', Ubuntu, Sans-Serif;
@@ -73,7 +73,7 @@
         stroke-dashoffset: 251.32741228718345;
       }
       to {
-        stroke-dashoffset: 27.167842267272412;
+        stroke-dashoffset: 27.108135868637753;
       }
     }
   
